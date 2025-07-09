@@ -4,13 +4,27 @@ class Page {
   final String title;
   final String description;
   final List<Widget> body;
+  final String? background;  
   final String styles;
   final Map<String, String> meta;
 
-  Page({required this.title, required this.description, required this.body, this.styles = "", this.meta = const {}});
+  Page({
+    required this.title,
+    required this.description,
+    required this.body,
+    this.background,
+    this.styles = "",
+    this.meta = const {},
+  });
 
   String build() {
     final metaTags = meta.entries.map((e) => '<meta name="${e.key}" content="${e.value}" />').join('\n  ');
+
+    final bodyStyle = '''
+      margin: 0;
+      padding: 0;
+      ${background != null ? 'background: $background;' : ''}
+    ''';
 
     return """
 <!DOCTYPE html>
@@ -23,7 +37,7 @@ class Page {
   $metaTags
   <style>
     $styles
-     body { margin: 0; padding: 0; }
+    body { $bodyStyle }
   </style>
 </head>
 <body>

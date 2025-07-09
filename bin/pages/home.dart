@@ -8,6 +8,7 @@ import '../screens/home_header.dart';
 final homePage = Page(
   title: "Home Page",
   description: "It is just home page",
+  background: 'linear-gradient(to bottom, ${Colors.skyBlue}, ${Colors.midnightBlue})',
   body: [
     homeHeader,
     Column(
@@ -32,9 +33,11 @@ final homePage = Page(
             radius: '16px',
             hoverColor: Colors.red,
             padding: EdgeInsets.paddingOnly(left: 24, right: 24, top: 14, bottom: 14),
-            textStyle: TextStyle(fontSize: '16px', color: Colors.white, fontWeight: 'bold')
+            textStyle: TextStyle(fontSize: '16px', color: Colors.white, fontWeight: 'bold'),
           ),
         ),
+
+        SizedBox(height: '48px'),
       ],
     ),
   ],

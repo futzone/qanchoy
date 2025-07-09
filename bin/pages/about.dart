@@ -1,17 +1,38 @@
 import 'package:qanchoy/qanchoy.dart';
+import 'package:qanchoy/src/styles/cross_axis_alignment.dart';
+import 'package:qanchoy/src/styles/main_axis_alignment.dart';
+import 'package:qanchoy/src/styles/markdown_style.dart';
+import 'package:qanchoy/src/widgets/markdown.dart';
+import 'package:qanchoy/src/widgets/sized_box.dart';
 
 final aboutPage = Page(
-  title: "About",
-  description: "It is just about page",
+  title: 'About',
+  description: 'Markdown viewer with sidebar',
+  background: '#f5f5f5',
   body: [
-    Column(
+    Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      styles: 'min-height: 100vh;',
       children: [
-        Text("Welcome to the About Page", style: TextStyle(typography: Typography.h1)),
-        Image(src: "https://picsum.photos/536/354"),
-        Text("Welcome to the About Page", style: TextStyle(typography: Typography.bodyMedium)),
         Container(
-          child: Text("This is a container", style: TextStyle()),
-          decoration: BoxDecoration(border: Border.all(color: Colors.black), borderRadius: BorderRadius.circular(10), color: Colors.red),
+          extra: 'width: 250px; background-color: #fff; padding: 16px; box-shadow: 2px 0 8px rgba(0,0,0,0.1);',
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text('📚 Qanchoy Docs', style: TextStyle(fontSize: '20px', fontWeight: 'bold')),
+              SizedBox(height: '16px'),
+              Button(text: 'Introduction', onClick: '#'),
+              Button(text: 'Getting Started', onClick: '#'),
+              Button(text: 'Widgets', onClick: '#'),
+            ],
+          ),
+        ),
+        Container(
+          extra: 'flex: 1; padding: 24px; margin: 24px',
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
+          child: Markdown(path: 'bin/md/about/about_start.md', style: MarkdownStyle(codeTextColor: Colors.black)),
         ),
       ],
     ),
