@@ -8,10 +8,10 @@ import 'screens/menu_bar_screen.dart';
 import 'screens/header_screen.dart';
 
 void main() {
-  final app = QachoyApp(
+  final app = QanchoyApp(
     header: appHeaderScreen,
     menuBar: appMenuBarScreen,
-    theme: QachoyApp.defaultTheme,
+    theme: QanchoyApp.defaultTheme,
     pages: [
       homePage,
       aboutPage,
@@ -21,5 +21,6 @@ void main() {
       /// Boshqa pagelar bo'ladi
     ],
   );
-  build(app);
+  // build(app);
+  app.runApp();
 }

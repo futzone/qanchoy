@@ -1,10 +1,8 @@
 import 'package:qanchoy/qanchoy.dart';
-import 'package:qanchoy/src/screens/menu_bar.dart';
 import 'package:qanchoy/src/styles/cross_axis_alignment.dart';
 import 'package:qanchoy/src/styles/main_axis_alignment.dart';
 import 'package:qanchoy/src/styles/markdown_style.dart';
 import 'package:qanchoy/src/widgets/markdown.dart';
-import 'package:qanchoy/src/widgets/menu_bar_item.dart';
 
 final aboutPage = Page(
   path: 'about',
@@ -16,8 +14,9 @@ final aboutPage = Page(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       styles: 'min-height: 100vh;',
-      children: [  Container(
-          extra: 'flex: 1; padding: 24px; margin: 24px;',
+      children: [
+        Container(
+          extra: 'flex: 1; ${EdgeInsets.only(left: 0, right: 16, top: 16, bottom: 16)}',
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), color: Colors.white),
           child: Markdown(path: 'bin/md/about/about.md', style: MarkdownStyle(codeTextColor: Colors.black, codeBackground: Colors.codeBg)),
         ),

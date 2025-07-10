@@ -10,6 +10,6 @@ class Container extends Widget {
 
   @override
   String build() {
-    return '<div style="${decoration.toString()} {${extra ?? ''}}">${child?.build() ?? ''}</div>';
+    return '<div style="${decoration.toString()} ${extra ?? ''}">${child?.build() ?? ''}</div>';
   }
 }

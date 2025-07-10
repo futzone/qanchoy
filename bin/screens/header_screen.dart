@@ -12,7 +12,7 @@ final appHeaderScreen = Header(
     backgroundColor: Colors.royalBlue,
     height: '64px',
     textColor: Colors.white,
-    padding: EdgeInsets.only(left: 0, right: 0, top: 16, bottom: 0),
+    padding: EdgeInsets.only(left: 0, right: 0, bottom: 0),
   ),
   actions: [
     Button(text: 'About', onClick: 'about', styles: ButtonStyles(textStyle: TextStyle(fontSize: '16px', color: Colors.wheat2, fontFamily: Fonts.verdana))),

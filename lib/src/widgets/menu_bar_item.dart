@@ -1,9 +1,10 @@
+import 'package:qanchoy/qanchoy.dart';
 import 'package:qanchoy/src/repository/widget.dart';
 
 class MenuItem extends Widget {
   final String title;
   final String href;
-
+  bool release;
   final String? selectedColor;
   final String? selectedTextColor;
   final String? unselectedColor;
@@ -14,6 +15,7 @@ class MenuItem extends Widget {
   final String? minWidth;
 
   MenuItem({
+    this.release = false,
     required this.title,
     required this.href,
     this.minWidth,
@@ -35,6 +37,7 @@ class MenuItem extends Widget {
       ${padding ?? ''}
       ${margin ?? ''}
       text-decoration: none;
+      font-family: ${Fonts.verdana};
       min-width: ${minWidth ?? "200px"};
       display: inline-block;
       transition: all 0.2s ease-in-out;
@@ -46,6 +49,7 @@ class MenuItem extends Widget {
       ${borderRadius ?? ''}
       ${padding ?? ''}
       ${margin ?? ''}
+       font-family: ${Fonts.verdana};
       text-decoration: none;
       min-width: ${minWidth ?? "200px"};
       display: inline-block;
@@ -53,8 +57,8 @@ class MenuItem extends Widget {
     '''.trim().replaceAll('\n', '');
 
     return '''
-<a href="$href" 
-   data-path="$href" 
+<a href="${release ? '$href.html' : href}" 
+   data-path="${release ? '$href.html' : href}" 
    data-selected-style="$selectedStyle" 
    style="$unselectedStyle">
    $title

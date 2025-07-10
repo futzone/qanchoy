@@ -22,11 +22,11 @@ final appMenuBarScreen = MenuBar(
       MenuItem(
         title: _menuItems[i]['title'],
         href: _menuItems[i]['href'],
-        selectedColor: Colors.blue,
+        selectedColor: Colors.royalBlue,
         selectedTextColor: Colors.white,
         unselectedColor: Colors.codeBg,
         unselectedTextColor: Colors.black,
-        padding: EdgeInsets.paddingOnly(left: 16, right: 16, top: 8, bottom: 8),
+        padding: EdgeInsets.paddingOnly(left: 16, right: 16, top: 12, bottom: 12),
         margin: EdgeInsets.only(left: 8, right: 8, top: i == 0 ? 8 : 2, bottom: 0),
         borderRadius: BorderRadius.circular(8),
         minWidth: '300px',

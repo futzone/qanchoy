@@ -13,7 +13,6 @@ class Button extends Widget {
   String build() {
     final builded =
         '<a href="$onClick" style="display: inline-block; text-decoration: none; ${styles.textStyle == null ? '' : styles.textStyle.toString()}; ${style ?? styles.build()}">$text</a>';
-    print(builded);
-    return builded;
+     return builded;
   }
 }

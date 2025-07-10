@@ -2,8 +2,6 @@ import 'package:qanchoy/qanchoy.dart';
 import 'package:qanchoy/src/repository/widget.dart';
 import 'package:qanchoy/src/screens/menu_bar.dart';
 import 'package:qanchoy/src/widgets/column.dart';
-import 'package:qanchoy/src/widgets/row.dart';
-import 'package:qanchoy/src/widgets/expanded.dart';
 import 'package:qanchoy/src/widgets/header.dart';
 
 class Page {
@@ -36,8 +34,8 @@ class Page {
   String build() {
     final metaTags = meta.entries.map((e) => '<meta name="${e.key}" content="${e.value}">').join('\n  ');
     final bodyStyle = '''
-      margin: 0;
-      padding: 0;
+      margin: 0 !important;
+    padding: 0 !important;
       ${background != null ? 'background: $background;' : ''}
     ''';
 
@@ -49,6 +47,8 @@ class Page {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>$title</title>
   <meta name="description" content="$description" />
+ <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   $metaTags
   <style>
     $styles
