@@ -1,9 +1,11 @@
+import 'package:qanchoy/qanchoy.dart';
+
 class HeaderStyle {
   final String backgroundColor;
   final String textColor;
   final String height;
   final String shadow;
-  final String padding;
+  final String? padding;
   final String borderBottom;
 
   const HeaderStyle({
@@ -11,7 +13,7 @@ class HeaderStyle {
     this.textColor = "#000000",
     this.height = "60px",
     this.shadow = "",
-    this.padding = "0 16px",
+    this.padding,
     this.borderBottom = "",
   });
 
@@ -20,7 +22,7 @@ class HeaderStyle {
       background-color: $backgroundColor;
       color: $textColor;
       height: $height;
-      padding: $padding;
+      ${padding ?? ''};
       ${shadow.isNotEmpty ? "box-shadow: $shadow;" : ""}
       ${borderBottom.isNotEmpty ? "border-bottom: $borderBottom;" : ""}
     ''';

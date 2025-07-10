@@ -8,13 +8,13 @@ class Header extends Widget {
   final String padding;
   final String gap;
 
-  Header({required this.title, this.gap = '8px', this.actions = const [], this.styles = const HeaderStyle(), this.padding = '16px'})
+  Header({required this.title, this.gap = '8px', this.actions = const [], this.styles = const HeaderStyle(), this.padding = 'padding: 0px'})
     : assert(actions.isNotEmpty, 'Actions cannot be empty');
 
   @override
   String build() {
     return '''
-<header style="display: flex; justify-content: space-between; align-items: center; padding: $padding; ${styles.build()}">
+<header style="display: flex; justify-content: space-between; align-items: center; $padding ${styles.build()}">
   ${title.build()}
   <nav class="header-actions">
     ${actions.map((e) => e.build()).join('\n')}

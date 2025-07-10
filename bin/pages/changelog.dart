@@ -17,28 +17,6 @@ final changelog = Page(
       mainAxisAlignment: MainAxisAlignment.start,
       styles: 'min-height: 100vh;',
       children: [
-        MenuBar(
-          sections: [
-            MenuItem(
-              title: 'About page',
-              href: 'about',
-              selectedStyle: 'background-color: #007BFF; color: white; border-radius: 8px; padding: 12px; text-decoration: none;',
-              unselectedStyle: 'color: #333; padding: 12px; border-radius: 8px; text-decoration: none;',
-            ),
-            MenuItem(
-              title: 'Changelog page',
-              href: 'changelog',
-              selectedStyle: 'background-color: #007BFF; color: white; border-radius: 8px; padding: 12px; text-decoration: none;',
-              unselectedStyle: 'color: #333; padding: 12px; border-radius: 8px; text-decoration: none;',
-            ),
-            MenuItem(
-              title: 'Docs Page',
-              href: 'docs',
-              selectedStyle: 'background-color: #007BFF; color: white; border-radius: 8px; padding: 12px; text-decoration: none;',
-              unselectedStyle: 'color: #333; padding: 12px; border-radius: 8px; ',
-            ),
-          ],
-        ),
         Container(
           extra: 'flex: 1; padding: 24px; margin: 24px;',
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), color: Colors.white),

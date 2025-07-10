@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <meta name="description" content="It is just home page" />
+  
+  <style>
+    
+    body {       margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #87CEEB, #191970);
+     }
+
+    .layout-desktop { display: flex; flex-direction: row; min-height: 100vh; }
+    .layout-mobile  { display: flex; flex-direction: column; }
+
+    @media (max-width: 767px) {
+      .layout-desktop { display: none; }
+    }
+    @media (min-width: 768px) {
+      .layout-mobile { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding-top: 4.0px; padding-bottom: 4.0px; padding-left: 24.0px; padding-right: 24.0px;       background-color: #4169E1;
+      color: #FFFFFF;
+      height: 64px;
+      margin-top: 16.0px; margin-bottom: 0.0px; margin-left: 0.0px; margin-right: 0.0px;;
+      
+      
+    ">
+  <span style="font-size: 20px; font-weight: bold; color: #FFFFFF; line-height: 1.5; font-family: Arial, sans-serif;">Qanchoy Web App</span>
+  <nav class="header-actions">
+    <a href="about" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">About</a>
+<a href="Contact" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">Contact</a>
+<a href="https://github.com/futzone" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">Github</a>
+  </nav>
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</header>
+
+<style>
+  .header-actions {
+    display: flex;
+    gap: 16px;
+  }
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .header-actions {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      padding: 8px;
+    }
+    .header-actions.active {
+      display: flex;
+    }
+    .menu-icon {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.header-actions');
+    menu.classList.toggle('active');
+  }
+</script>
+
+
+  <div style="
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 0px;
+  ">
+  <div style="
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 0px;
+  ">
+  <div style="width: 0px; height: 48px;"></div>
+<span style="font-size: 40px; font-weight: bold; color: #000000; line-height: 1.5; font-family: Georgia, serif;">Assalomu Alaykum</span>
+<span style="font-size: 40px; font-weight: 700; line-height: 1.25;">Bu birinchi «Qanchoy Web Page»!</span>
+<div style="width: 0px; height: 48px;"></div>
+<img src="https://picsum.photos/536/354" alt="" style="width: 600.0px; height: 400.0px; object-fit: cover; border-radius: 16.0px;" />
+<div style="width: 0px; height: 48px;"></div>
+<a href="about" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: bold; color: #FFFFFF; line-height: 1.5; font-family: sans-serif;; color: #FFFFFF; background-color: #007BFF; border: none; padding: 12px 24px; border-radius: 4px; font-size: 16px; cursor: pointer;">Meni bosing</a>
+<div style="width: 0px; height: 48px;"></div>
+</div>
+
+</div>
+
+</body>
+</html>

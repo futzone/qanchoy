@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog</title>
+  <meta name="description" content="Markdown viewer with sidebar" />
+  
+  <style>
+    
+    body {       margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+     }
+
+    .layout-desktop { display: flex; flex-direction: row; min-height: 100vh; }
+    .layout-mobile  { display: flex; flex-direction: column; }
+
+    @media (max-width: 767px) {
+      .layout-desktop { display: none; }
+    }
+    @media (min-width: 768px) {
+      .layout-mobile { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding-top: 4.0px; padding-bottom: 4.0px; padding-left: 24.0px; padding-right: 24.0px;       background-color: #4169E1;
+      color: #FFFFFF;
+      height: 64px;
+      margin-top: 16.0px; margin-bottom: 0.0px; margin-left: 0.0px; margin-right: 0.0px;;
+      
+      
+    ">
+  <span style="font-size: 20px; font-weight: bold; color: #FFFFFF; line-height: 1.5; font-family: Arial, sans-serif;">Qanchoy Web App</span>
+  <nav class="header-actions">
+    <a href="about" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">About</a>
+<a href="Contact" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">Contact</a>
+<a href="https://github.com/futzone" style="display: inline-block; text-decoration: none; font-size: 16px; font-weight: normal; color: #F5DEB3; line-height: 1.5; font-family: Verdana, Geneva, sans-serif;; width: auto;height: auto;border-radius: 0px;">Github</a>
+  </nav>
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+</header>
+
+<style>
+  .header-actions {
+    display: flex;
+    gap: 16px;
+  }
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .header-actions {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      padding: 8px;
+    }
+    .header-actions.active {
+      display: flex;
+    }
+    .menu-icon {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.header-actions');
+    menu.classList.toggle('active');
+  }
+</script>
+
+
+  <div class="layout-desktop">
+  <nav style="display: flex; flex-direction: column; gap: 8px; margin-top: 16.0px; margin-bottom: 16.0px; margin-left: 16.0px; margin-right: 16.0px;; background-color: #FFFFFF; border-radius: 12.0px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <a href="about" 
+   data-path="about" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 8.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 8.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   About page
+</a>
+
+<a href="changelog" 
+   data-path="changelog" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   Changelog page
+</a>
+
+<a href="docs" 
+   data-path="docs" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   Docs page
+</a>
+
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const currentFile = window.location.pathname.split('/').pop();
+    const currentPath = currentFile === '' ? 'index.html' : currentFile;
+
+    document.querySelectorAll('a[data-path]').forEach(link => {
+      if (link.getAttribute('data-path') === currentPath) {
+      
+        link.style.cssText = link.getAttribute('data-selected-style');
+      }
+    });
+  });
+</script>
+
+  <div style="flex:1;">
+    <div style="
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 0px;
+  min-height: 100vh;">
+  <div style="background-color: #FFFFFF; border-radius: 16.0px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); {flex: 1; padding: 24px; margin: 24px;}"><div style="color: #000000;
+font-size: 16px;
+font-family: sans-serif;
+line-height: 1.6;
+padding: 16px;
+">
+  <style>
+    pre, code {
+  background: #f5f5f5;
+  color: #000000;
+  padding: 8px;
+  border-radius: 4px;
+  display: block;
+  overflow-x: auto;
+   font-family: 'Fira Code', monospace;
+}
+
+  </style>
+  <h1>📦 Changelog Qanchoy</h1>
+<p>Qanchoy – bu <strong>Dart</strong> dasturlash tilida yozilgan, <em>Flutter syntax</em> ruhidagi <strong>static website generator</strong>.</p>
+<hr />
+<h2>✨ Features</h2>
+<ul>
+<li>⚡ Super fast build</li>
+<li>🎨 Flutter uslubida widgetlar</li>
+<li>📄 Markdown'dan HTML ga parsing</li>
+<li>🌈 Theme va style bilan to‘liq boshqaruv</li>
+</ul>
+<hr />
+<h2>🧩 Architecture</h2>
+<pre><code class="language-plaintext">/qanchoy
+ ├─ /src
+ │   ├─ /theme       # Colors, Fonts, Typography
+ │   ├─ /styles      # TextStyle, ButtonStyles, Spacing
+ │   └─ /repository  # Widget abstract va tayyor widgetlar
+</code></pre>
+<hr />
+<h2>🚀 Quick start</h2>
+<pre><code class="language-dart">final page = Page(
+  title: 'Qanchoy',
+  description: 'Modern static site generator',
+  background: 'linear-gradient(to right, #ff7e5f, #feb47b)',
+  body: [
+    Header(...),
+    Markdown(path: 'docs/about.md'),
+  ],
+);
+</code></pre>
+<hr />
+<h2>❤️ Author</h2>
+<p>Made by Zamon &amp; Ser Networkshoh Leonardo Gujuferro Jerjerro VII
+<em>Muqaddas Dart, Flutter va markdown muhabbatidan tug‘ilgan.</em></p>
+<hr />
+<h2>📜 License</h2>
+<p>MIT License</p>
+
+</div>
+</div>
+</div>
+
+  </div>
+</div>
+<div class="layout-mobile">
+  <nav style="display: flex; flex-direction: column; gap: 8px; margin-top: 16.0px; margin-bottom: 16.0px; margin-left: 16.0px; margin-right: 16.0px;; background-color: #FFFFFF; border-radius: 12.0px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <a href="about" 
+   data-path="about" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 8.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 8.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   About page
+</a>
+
+<a href="changelog" 
+   data-path="changelog" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   Changelog page
+</a>
+
+<a href="docs" 
+   data-path="docs" 
+   data-selected-style="background-color: #0000FF;      color: #FFFFFF;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;" 
+   style="background-color: #f5f5f5;      color: #000000;      border-radius: 8.0px;      padding-top: 8.0px; padding-bottom: 8.0px; padding-left: 16.0px; padding-right: 16.0px;      margin-top: 2.0px; margin-bottom: 0.0px; margin-left: 8.0px; margin-right: 8.0px;      text-decoration: none;      min-width: 300px;      display: inline-block;      transition: all 0.2s ease-in-out;">
+   Docs page
+</a>
+
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const currentFile = window.location.pathname.split('/').pop();
+    const currentPath = currentFile === '' ? 'index.html' : currentFile;
+
+    document.querySelectorAll('a[data-path]').forEach(link => {
+      if (link.getAttribute('data-path') === currentPath) {
+      
+        link.style.cssText = link.getAttribute('data-selected-style');
+      }
+    });
+  });
+</script>
+
+  <div>
+    <div style="
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 0px;
+  min-height: 100vh;">
+  <div style="background-color: #FFFFFF; border-radius: 16.0px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.1); {flex: 1; padding: 24px; margin: 24px;}"><div style="color: #000000;
+font-size: 16px;
+font-family: sans-serif;
+line-height: 1.6;
+padding: 16px;
+">
+  <style>
+    pre, code {
+  background: #f5f5f5;
+  color: #000000;
+  padding: 8px;
+  border-radius: 4px;
+  display: block;
+  overflow-x: auto;
+   font-family: 'Fira Code', monospace;
+}
+
+  </style>
+  <h1>📦 Changelog Qanchoy</h1>
+<p>Qanchoy – bu <strong>Dart</strong> dasturlash tilida yozilgan, <em>Flutter syntax</em> ruhidagi <strong>static website generator</strong>.</p>
+<hr />
+<h2>✨ Features</h2>
+<ul>
+<li>⚡ Super fast build</li>
+<li>🎨 Flutter uslubida widgetlar</li>
+<li>📄 Markdown'dan HTML ga parsing</li>
+<li>🌈 Theme va style bilan to‘liq boshqaruv</li>
+</ul>
+<hr />
+<h2>🧩 Architecture</h2>
+<pre><code class="language-plaintext">/qanchoy
+ ├─ /src
+ │   ├─ /theme       # Colors, Fonts, Typography
+ │   ├─ /styles      # TextStyle, ButtonStyles, Spacing
+ │   └─ /repository  # Widget abstract va tayyor widgetlar
+</code></pre>
+<hr />
+<h2>🚀 Quick start</h2>
+<pre><code class="language-dart">final page = Page(
+  title: 'Qanchoy',
+  description: 'Modern static site generator',
+  background: 'linear-gradient(to right, #ff7e5f, #feb47b)',
+  body: [
+    Header(...),
+    Markdown(path: 'docs/about.md'),
+  ],
+);
+</code></pre>
+<hr />
+<h2>❤️ Author</h2>
+<p>Made by Zamon &amp; Ser Networkshoh Leonardo Gujuferro Jerjerro VII
+<em>Muqaddas Dart, Flutter va markdown muhabbatidan tug‘ilgan.</em></p>
+<hr />
+<h2>📜 License</h2>
+<p>MIT License</p>
+
+</div>
+</div>
+</div>
+
+  </div>
+</div>
+
+</body>
+</html>

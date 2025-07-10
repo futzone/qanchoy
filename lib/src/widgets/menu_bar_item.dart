@@ -3,18 +3,62 @@ import 'package:qanchoy/src/repository/widget.dart';
 class MenuItem extends Widget {
   final String title;
   final String href;
-  final String selectedStyle;
-  final String unselectedStyle;
+
+  final String? selectedColor;
+  final String? selectedTextColor;
+  final String? unselectedColor;
+  final String? unselectedTextColor;
+  final String? borderRadius;
+  final String? padding;
+  final String? margin;
+  final String? minWidth;
 
   MenuItem({
     required this.title,
     required this.href,
-    this.selectedStyle = 'font-weight: bold; color: #007BFF;',
-    this.unselectedStyle = 'color: #333;',
+    this.minWidth,
+    this.selectedColor,
+    this.selectedTextColor,
+    this.unselectedColor,
+    this.unselectedTextColor,
+    this.borderRadius,
+    this.padding,
+    this.margin,
   });
 
   @override
   String build() {
-    return '<a href="$href" data-path="$href" style="$unselectedStyle">$title</a>';
+    final selectedStyle = '''
+      background-color: ${selectedColor ?? "#007BFF"};
+      color: ${selectedTextColor ?? "white"};
+      ${borderRadius ?? ''}
+      ${padding ?? ''}
+      ${margin ?? ''}
+      text-decoration: none;
+      min-width: ${minWidth ?? "200px"};
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+    '''.trim().replaceAll('\n', '');
+
+    final unselectedStyle = '''
+      background-color: ${unselectedColor ?? "#007BFF"};
+      color: ${unselectedTextColor ?? "white"};
+      ${borderRadius ?? ''}
+      ${padding ?? ''}
+      ${margin ?? ''}
+      text-decoration: none;
+      min-width: ${minWidth ?? "200px"};
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+    '''.trim().replaceAll('\n', '');
+
+    return '''
+<a href="$href" 
+   data-path="$href" 
+   data-selected-style="$selectedStyle" 
+   style="$unselectedStyle">
+   $title
+</a>
+''';
   }
 }

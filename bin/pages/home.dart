@@ -3,15 +3,14 @@ import 'package:qanchoy/src/styles/button_styles.dart';
 import 'package:qanchoy/src/styles/cross_axis_alignment.dart';
 import 'package:qanchoy/src/styles/main_axis_alignment.dart';
 import 'package:qanchoy/src/widgets/sized_box.dart';
-import '../screens/home_header.dart';
 
 final homePage = Page(
-  path: 'home',
+  path: 'index',
+  hideMenuBar: true,
   title: "Home Page",
   description: "It is just home page",
   background: 'linear-gradient(to bottom, ${Colors.skyBlue}, ${Colors.midnightBlue})',
   body: [
-    homeHeader,
     Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,

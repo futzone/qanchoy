@@ -3,21 +3,32 @@ import 'package:qanchoy/src/widgets/menu_bar_item.dart';
 
 class MenuBar extends Widget {
   final List<MenuItem> sections;
+  final String? padding;
+  final String? borderRadius;
+  final String? backgroundColor;
+  final String? gap;
+  final String? boxShadow;
 
-  MenuBar({required this.sections});
+  MenuBar({required this.sections, this.padding, this.borderRadius, this.backgroundColor, this.gap, this.boxShadow = "0 2px 4px rgba(0,0,0,0.1)"});
 
   @override
   String build() {
     return '''
-<nav style="display: flex; flex-direction: column; gap: 8px; padding: 16px; background-color: #f8f9fa; border-radius: 12px;">
+<nav style="display: flex; flex-direction: column; gap: ${gap ?? '8px'}; ${padding ?? ''}; background-color: ${backgroundColor ?? '#f8f9fa'}; ${borderRadius ?? ''} box-shadow: $boxShadow;">
   ${sections.map((item) => item.build()).join('\n')}
 </nav>
 <script>
-  const currentPath = window.location.pathname.split('/').pop();
-  document.querySelectorAll('a[data-path]').forEach(link => {
-    if (link.getAttribute('data-path') === currentPath) {
-      link.style.cssText = "${sections.first.selectedStyle}";
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const currentFile = window.location.pathname.split('/').pop();
+    const currentPath = currentFile === '' ? 'index.html' : currentFile;
+
+    document.querySelectorAll('a[data-path]').forEach(link => {
+      if (link.getAttribute('data-path') === currentPath) {
+      
+        link.style.cssText = link.getAttribute('data-selected-style');
+      }
+    });
   });
 </script>
 ''';

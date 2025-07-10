@@ -3,7 +3,7 @@ import 'package:qanchoy/src/styles/button_styles.dart';
 import 'package:qanchoy/src/styles/header_style.dart';
 import 'package:qanchoy/src/widgets/header.dart';
 
-final homeHeader = Header(
+final appHeaderScreen = Header(
   gap: '16px',
   padding: EdgeInsets.paddingOnly(left: 24, right: 24, top: 4, bottom: 4),
   title: Text("Qanchoy Web App", style: TextStyle(fontSize: '20px', color: Colors.white, fontWeight: 'bold', fontFamily: Fonts.arial)),
