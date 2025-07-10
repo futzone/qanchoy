@@ -17,7 +17,7 @@ class QachoyApp {
     await for (HttpRequest request in server) {
       final path = request.uri.path == '/' ? '/index' : request.uri.path;
 
-      final page = pages.firstWhere((p) => '/${p.title.toLowerCase()}' == path, orElse: () => pages.first);
+      final page = pages.firstWhere((p) => '/${p.path.toLowerCase()}' == path, orElse: () => pages.first);
 
       final html = page.build();
       request.response

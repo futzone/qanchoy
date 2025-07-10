@@ -6,6 +6,7 @@ import 'package:qanchoy/src/widgets/sized_box.dart';
 import '../screens/home_header.dart';
 
 final homePage = Page(
+  path: 'home',
   title: "Home Page",
   description: "It is just home page",
   background: 'linear-gradient(to bottom, ${Colors.skyBlue}, ${Colors.midnightBlue})',

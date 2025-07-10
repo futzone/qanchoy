@@ -6,9 +6,9 @@ import 'package:qanchoy/src/styles/markdown_style.dart';
 import 'package:qanchoy/src/widgets/markdown.dart';
 import 'package:qanchoy/src/widgets/menu_bar_item.dart';
 
-final aboutPage = Page(
-  path: 'about',
-  title: 'About',
+final changelog = Page(
+  path: 'changelog',
+  title: 'Changelog',
   description: 'Markdown viewer with sidebar',
   background: '#f5f5f5',
   body: [
@@ -42,7 +42,7 @@ final aboutPage = Page(
         Container(
           extra: 'flex: 1; padding: 24px; margin: 24px;',
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), color: Colors.white),
-          child: Markdown(path: 'bin/md/about/about.md', style: MarkdownStyle(codeTextColor: Colors.black, codeBackground: '#f5f5f5')),
+          child: Markdown(path: 'bin/md/changelog/changelog.md', style: MarkdownStyle(codeTextColor: Colors.black, codeBackground: '#f5f5f5')),
         ),
       ],
     ),

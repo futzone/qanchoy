@@ -3,6 +3,7 @@ import 'package:qanchoy/src/repository/widget.dart';
 class Page {
   final String title;
   final String description;
+  final String path;
   final List<Widget> body;
   final String? background;  
   final String styles;
@@ -11,6 +12,7 @@ class Page {
   Page({
     required this.title,
     required this.description,
+    required this.path,
     required this.body,
     this.background,
     this.styles = "",
